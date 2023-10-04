@@ -23,7 +23,7 @@ const estoqueBaixoreposicao = (req, res) => {
 }
 
 const estoqueSuficiente = (req, res) => {
-    const estoqueMinimoOK = listaProdutos.filter((produto) => produto.quantidade > 10);
+    const estoqueMinimoOK = listaProdutos.filter((produto) => produto.quantidade >= 10);
     return res.status(200).json({ "Estoque com itens suficientes (verde)": estoqueMinimoOK });
 
 }
@@ -84,7 +84,7 @@ const cadastrarProduto = (req, res) => {
             return res.status(400).json({ mensagem: "É necessário que todos os itens estejam preenchidos" })
         }
 
-        if (valorUnitário == isNaN || quantidade == isNaN) {
+        if (isNaN(valorUnitário) || isNaN(quantidade)) {
             return res.status(400).json({ mensagem: "Esse valor precisa ser um número" })
         }
 
@@ -138,7 +138,7 @@ const alterarProduto = (req, res) => {
             return res.status(400).json({ mensagem: "É necessário que todos os itens estejam preenchidos" })
         }
 
-        if (valorUnitário == isNaN || quantidade == isNaN) {
+        if (isNaN(valorUnitário) || isNaN(quantidade)) {
             return res.status(400).json({ mensagem: "Esse valor precisa ser um número" })
         }
 
@@ -146,22 +146,24 @@ const alterarProduto = (req, res) => {
             return res.status(400).json({ mensagem: "O item é obrigatório ser preenchido corretamente" })
         }
 
-        const encontrarProduto = listaProdutos.find((encontrar) => {
-            return encontrar.id === Number(id)
+        const index = listaProdutos.findIndex((produto) => produto.id === Number(id));
 
-        });
+        if (index !== -1) {
+            listaProdutos[index] = {
+                id: Number(id),
+                descrição: descrição,
+                valorUnitário: valorUnitário,
+                quantidade: quantidade,
+                estoquista: estoquista,
+                fornecedor: fornecedor,
+                data: new Date().toLocaleString("pt-BR"),
+            };
 
-        if (!encontrarProduto) {
-            return res.status(404).json({ mensagem: "Produto não encontrado, analise se o preenchimento esta correto, caso esteja cadastre o produto" });
+            fs.writeFileSync('./1-src/bancoDeDados/listaProdutos.js', `module.exports = ${JSON.stringify(listaProdutos, null, 2)};`, 'utf-8')
+            return res.status(200).send();
         }
 
-        encontrarProduto.descrição = descrição;
-        encontrarProduto.valorUnitário = valorUnitário;
-        encontrarProduto.quantidade = quantidade;
-        encontrarProduto.estoquista = estoquista;
-        encontrarProduto.fornecedor = fornecedor;
-
-        return res.status(200).send();
+        return res.status(404).json({ mensagem: "Produto não encontrado, analise se o preenchimento esta correto, caso esteja cadastre o produto" });
 
     } catch (erro) {
         return res.json(`Erro: ${erro.mensagem}`);
