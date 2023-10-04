@@ -52,5 +52,14 @@ module.exports = [
     "estoquista": "Larissa",
     "fornecedor": "loja do mecânico",
     "data": "03/10/2023, 18:06:33"
+  },
+  {
+    "id": 7,
+    "descrição": "Carrinho de ferramentas",
+    "valorUnitário": 500,
+    "quantidade": 4,
+    "estoquista": "Larissa",
+    "fornecedor": "loja do mecânico",
+    "data": "04/10/2023, 11:51:15"
   }
 ];

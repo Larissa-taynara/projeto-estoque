@@ -11,8 +11,8 @@ const TotalDeItensEstoque = async (req, res) => {
 
 //CONTROLE DO ESTOQUE - KANBAN
 const estoqueBaixo = (req, res) => {
-    const estoqueMinimoUrgente = listaProdutos.filter((produto) => produto.quantidade <= 3);
-    return res.status(200).json({ "Necessário reposição urgênte (vermelho)": estoqueMinimoUrgente });
+    const estoqueMinimoUrgente = listaProdutos.filter((produto) => produto.quantidade <= 5);
+    return res.status(200).json({ "Necessário reposição urgente (vermelho)": estoqueMinimoUrgente });
 
 }
 

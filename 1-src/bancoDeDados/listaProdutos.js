@@ -12,7 +12,7 @@ module.exports = [
     "id": 2,
     "descrição": "Carrinho de ferramentas",
     "valorUnitário": 500,
-    "quantidade": 42,
+    "quantidade": 38,
     "estoquista": "Larissa",
     "fornecedor": "loja do mecânico",
     "data": "03/10/2023, 11:00:24"
