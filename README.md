@@ -110,7 +110,7 @@ Assim, é possível garantir um fluxo de trabalho leve, contínuo e sem sobrecar
 sistema puxado.
 
 <p align="center">
-<img src="https://github.com/Larissa-taynara/projeto-estoque/assets/138536327/a224c02a-5751-4dae-b20b-99fbc6c08957" alt="Nome da Imagem">
+<img src="https://github.com/Larissa-taynara/projeto-estoque/assets/138536327/779978d7-3cac-4124-a4f3-c1165b5e9bd3" alt="Nome da Imagem">
 </p>
 <p align="center">
 <img src="https://github.com/Larissa-taynara/projeto-estoque/assets/138536327/d671b3b0-0933-4a9a-a52c-0ba457fe27c5)" alt="Nome da Imagem">
