@@ -110,10 +110,10 @@ Assim, é possível garantir um fluxo de trabalho leve, contínuo e sem sobrecar
 sistema puxado.
 
 <p align="center">
-<img src="https://github.com/Larissa-taynara/projeto-estoque/assets/138536327/779978d7-3cac-4124-a4f3-c1165b5e9bd3" alt="Nome da Imagem">
+<img src="https://github.com/Larissa-taynara/projeto-estoque/assets/138536327/04b86e6c-e27c-4ac1-a730-1249d12fe36b" alt="Nome da Imagem">
 </p>
 <p align="center">
-<img src="https://github.com/Larissa-taynara/projeto-estoque/assets/138536327/d671b3b0-0933-4a9a-a52c-0ba457fe27c5)" alt="Nome da Imagem">
+<img src="https://github.com/Larissa-taynara/projeto-estoque/assets/138536327/63a074c7-a130-4984-9db6-22ed24f32d55" alt="Nome da Imagem">
 </p>
 
 ## 7. Utilização no insomnia
