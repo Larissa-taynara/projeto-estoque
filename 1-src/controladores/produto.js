@@ -4,7 +4,7 @@ const saidaDeItens = require('../bancoDeDadosSaida/saidaDeProdutos');
 
 
 
-const TotalDeItensEstoque = async (req, res) => {
+const TotalDeItensEstoque = (req, res) => {
     res.status(200).json(listaProdutos);
 
 }
