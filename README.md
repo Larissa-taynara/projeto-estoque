@@ -99,6 +99,8 @@ O código esta separado por conforme a estrutura abixo:
 📁 Arquivo principal controlador 
 ![image](https://github.com/Larissa-taynara/projeto-estoque/assets/138536327/6bd6ef68-e93a-4274-accb-c5f297afa5a6)
 
+https://github.com/Larissa-taynara/projeto-estoque/assets/138536327/f8d6f359-2cc8-4353-9a22-55d97ed1d694
+
 📁 Biblioteca dos itens que sairam do estoque
 ![image](https://github.com/Larissa-taynara/projeto-estoque/assets/138536327/b5a04d4a-cafb-48dc-bced-2a002853cd06)
 
