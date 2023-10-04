@@ -23,7 +23,7 @@ const estoqueBaixoreposicao = (req, res) => {
 }
 
 const estoqueSuficiente = (req, res) => {
-    const estoqueMinimoOK = listaProdutos.filter((produto) => produto.quantidade >= 10);
+    const estoqueMinimoOK = listaProdutos.filter((produto) => produto.quantidade > 10);
     return res.status(200).json({ "Estoque com itens suficientes (verde)": estoqueMinimoOK });
 
 }
